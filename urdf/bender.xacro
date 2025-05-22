@@ -27,6 +27,14 @@
   </collision>
 </link>
 
+<link name="base_footprint"/>
+
+<joint name="base_footprint_joint" type="fixed">
+  <parent link="base_footprint"/>
+  <child link="base_link"/>
+  <origin xyz="0 0 0.1" rpy="0 0 0"/>
+</joint>
+
 <link name="l2l_1">
   <inertial>
     <origin xyz="-0.008469138038562633 4.816697341814002e-07 -0.07819087904751898" rpy="0 0 0"/>
@@ -441,7 +449,7 @@
   </collision>
 </link>
 
-<link name="laser_1">
+<link name="laser">
   <inertial>
     <origin xyz="0.00021452729941068283 1.2832545766421587e-05 0.03715423693922987" rpy="0 0 0"/>
     <mass value="0.14304545734211704"/>
